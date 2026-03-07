@@ -1,0 +1,355 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "name": "Kelly-Hopkinsville Goblins",
+            "region": "Hopkinsville, KY",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-87.4901796240019, 36.8628650923428],
+            "type": "Point"
+        },
+        "id": 1
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Beast of the Land Between the Lakes",
+            "region": "Land Between the Lakes National Recreation Area (Lyon and Trigg Counties)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-88.04099045265436, 36.79286779625234],
+            "type": "Point"
+        },
+        "id": 2
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Mothman",
+            "region": "Mount Sterling, KY",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-82.4116293771342, 37.4682679291365],
+            "type": "Point"
+        },
+        "id": 3
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Wampus Cat",
+            "region": "Appalachian Forests",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-83.40719690403273, 36.76551255872518],
+            "type": "Point"
+        },
+        "id": 4
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Hillbilly Beast",
+            "region": "Eastern Kentucky near Ohio River",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-82.96819556028001, 38.55817042005971],
+            "type": "Point"
+        },
+        "id": 5
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Tailypo",
+            "region": "Appalachian Forests",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-82.88711507163723, 37.38484264838678],
+            "type": "Point"
+        },
+        "id": 6
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Herrington Lake Monster",
+            "region": "Herrington Lake (Mercer, Garrard, and Boyle Counties)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-84.68996488692342, 37.74393536169815],
+            "type": "Point"
+        },
+        "id": 7
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Green River Mermaids",
+            "region": "Green River (Edmonson, Hart, and Barren Counties)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-86.10574382756774, 37.1981235282247],
+            "type": "Point"
+        },
+        "id": 8
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Hillbilly Beast",
+            "region": "Tygarts Creek (Carter and Greenup Counties)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-82.96819556028, 38.5581704200597],
+            "type": "Point"
+        },
+        "id": 9
+    },{
+        "type": "Feature",
+        "properties": {
+            "name": "Ghost Horses of Mammoth Cave",
+            "region": "Mammoth Cave National Park (Edmonson, Hart, and Barren Counties)",
+            "description": "",
+            "type": "specter"
+        },
+        "geometry": {
+            "coordinates": [-86.13472853877137, 37.18022758094614],
+            "type": "Point"
+        },
+        "id": 10
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Tommyknockers of the Mines",
+            "region": "Eastern KY Coal Mines",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-83.11911481550989, 37.41084841036209],
+            "type": "Point"
+        },
+        "id": 11
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Hogan's Fountain Statue of Pan",
+            "region": "Cherokee Park (Louisville, KY)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-85.69645052141863, 38.23943018303156],
+            "type": "Point"
+        },
+        "id": 12
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Specters of the Cumberland",
+            "region": "Cumberland Falls & River (McCreary County and Whitley County)",
+            "description": "",
+            "type": "specter"
+        },
+        "geometry": {
+            "coordinates": [-84.34606294228244, 36.840237369992266],
+            "type": "Point"
+        },
+        "id": 13
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Bearilla",
+            "region": "Nicholas County",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-83.99030776222924, 38.32512046049135],
+            "type": "Point"
+        },
+        "id": 14
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Panther of Pine Mountain",
+            "region": "Pine Mountain (Pike, Bell, Harlan, Letcher, and Whitley Counties)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-83.18267867145764, 36.95286035486617],
+            "type": "Point"
+        },
+        "id": 15
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Sheepsquatch",
+            "region": "Breckinridge County",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-86.5599038282934, 37.74465750612745],
+            "type": "Point"
+        },
+        "id": 16
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Giraffe-Possum",
+            "region": "Highway 60 (Winchester, KY)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-84.141685857986, 38.03193127210838],
+            "type": "Point"
+        },
+        "id": 17
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Boonesborough Octopus",
+            "region": "Kentucky River (Boonesborough, KY)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-84.26931940932602, 37.907256174490186],
+            "type": "Point"
+        },
+        "id": 18
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Milton Lizard (Creature of Canip Creek)",
+            "region": "Canip Creek (Milton, KY)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-85.34561448776842, 38.71063830065353],
+            "type": "Point"
+        },
+        "id": 19
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Demon Leaper",
+            "region": "Walnut Street Baptist Church (Louisville, KY)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-85.75807550233132, 38.237191403424276],
+            "type": "Point"
+        },
+        "id": 20
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Sleepy Hollow Road",
+            "region": "Prospect, KY",
+            "description": "",
+            "type": "specter"
+        },
+        "geometry": {
+            "coordinates": [-85.54489879895095, 38.35638313518476],
+            "type": "Point"
+        },
+        "id": 21
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Cop Ghost of Narrows Road",
+            "region": "Narrows Road (Erlanger, KY)",
+            "description": "",
+            "type": "specter"
+        },
+        "geometry": {
+            "coordinates": [-84.57734615786214, 38.980709202863125],
+            "type": "Point"
+        },
+        "id": 22
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Pope Lick Monster (Goatman of Fisherville)",
+            "region": "Norfolk Southern Railway Trestle (Fisherville, KY)",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-85.45693256621732, 38.19078396723002],
+            "type": "Point"
+        },
+        "id": 23
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Twin Train Tunnels",
+            "region": "Labs Ferry Road (Ryland, KY)",
+            "description": "",
+            "type": "specter"
+        },
+        "geometry": {
+            "coordinates": [-84.44860449542428, 38.95823107556298],
+            "type": "Point"
+        },
+        "id": 24
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Witch Child of Pilot's Knob",
+            "region": "Pilot's Knob Cemetery (Marion County)",
+            "description": "",
+            "type": "specter"
+        },
+        "geometry": {
+            "coordinates": [-88.0666666489611, 37.37192735511832],
+            "type": "Point"
+        },
+        "id": 25
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Bigfoot",
+            "region": "Anderson County",
+            "description": "",
+            "type": "cryptid"
+        },
+        "geometry": {
+            "coordinates": [-84.87850790852008, 38.024379071703095],
+            "type": "Point"
+        },
+        "id": 26
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Hanging Man of Allendale Train Tunnel",
+            "region": "Allendale Train Tunnel (Elsmere, KY)",
+            "description": "",
+            "type": "specter"
+        },
+        "geometry": {
+            "coordinates": [-84.592172291377, 38.9920469508933],
+            "type": "Point"
+        },
+        "id": 27
+    }]
+}

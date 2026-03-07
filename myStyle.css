@@ -45,7 +45,7 @@ p {
 }
 
 a {
-    color: #007bff;
+    color: #6272b9;
     text-decoration: none;
 }
 
@@ -61,26 +61,26 @@ a {
 }
 
 button {
-    background: rgba(209, 127, 33, 0.9);
+    background: rgba(123, 122, 190, 0.9);
     color: rgba(255, 255, 255, 0.8);
-    border: 2px solid rgba(170, 104, 28, 0.9);
+    border: 2px solid rgba(102, 101, 158, 0.9);
     border-radius: 10px;
 }
 
 button:hover {
-    background: rgb(238, 145, 38);
-    border: 2px solid rgba(170, 104, 28, 1);
+    background: rgba(102, 101, 158, 0.9);
+    border: 2px solid rgba(102, 101, 158, 0.9);
 
 }
 
 .btn-primary {
-    background: rgba(192, 58, 24, 0.9);
-    border: 2px solid rgba(145, 42, 16, 0.9);
+    background: rgba(123, 122, 190, 0.9);
+    border: 2px solid rgba(102, 101, 158, 0.9);
 }
 
 .btn-primary:hover {
-    background: rgb(228, 69, 30);
-    border: 2px solid rgba(145, 42, 16, 1);
+    background: rgba(102, 101, 158, 0.9);
+    border: 2px solid rgba(102, 101, 158, 0.9);
 }
 
 /* Loading spinner style */
@@ -260,11 +260,11 @@ button:hover {
     position: fixed;
     top: 15px;
     left: 0;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     background-color: #888ca9; /* Fix hover color since it is orange like the button class */
     color: rgb(0, 0, 0);
-    padding: 10px 14px;
+    padding: 5px 10px;
     z-index: 1001;
 }
 
@@ -298,6 +298,7 @@ button:hover {
     grid-auto-rows: 200px;
     gap: 20px;
     grid-auto-flow: dense;
+    background-color: #b1b1ce;
 }
 
 .img-div {

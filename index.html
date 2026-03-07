@@ -27,9 +27,10 @@
     <div id="navSidebar" class="sidebar animate-left">
         <div id="navbarContent">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-            <a href="#webmap" onclick="closeNav()">Map</a>
-            <a href="#about" onclick="closeNav()">About</a>
-            <a href="#contact" onclick="closeNav()">Resources</a>
+            <a href="#map" onclick="closeNav()">Map</a>
+            <a href="#description" onclick="closeNav()">About</a>
+            <a href="#scroll-content" onclick="closeNav()">Image Gallery</a>
+            <a href="#footer" onclick="closeNav()">Resources</a>
         </div>
     </div>
 
@@ -74,26 +75,7 @@
                 </div>
                 <div class="offcanvas-body">
                     <h3 class="py-2">NWS Active Weather Alerts</h3>
-                    <p>
-                        This map displays all active weather alerts across the United States as of the current date.
-                        The data is sourced from the National Weather Service (NWS) API, specifically for active alerts,
-                        which provides information on all active warnings including event type, severity, urgency, and
-                        a link to more information. This map uses a simple color coding scheme to classify different
-                        levels
-                        of alert severity, with darker colors indicating more severe alerts (with the exception of
-                        purple,
-                        which is used for alerts of unknown severity).
-                    </p>
-                    <div id="img"></div>
-                    <hr />
-                    <ul class="list-unstyled">
-                        <li>Authored by: <a href="https://github.com/DTAbeyrathne">Dilni Abeyrathne</a></li>
-                        <li>Map created: Feb. 20th, 2026</li>
-                        <li>Data source:
-                            <a href="https://api.weather.gov/">weather.gov API (NWS)</a>,
-                            <a href="https://api.weather.gov/alerts/active?">Active Alerts (specific URL)</a>
-                        </li>
-                    </ul>
+                    <p> Put some description here.</p>
                 </div>
             </div>
 
@@ -108,28 +90,258 @@
             </div>
 
                 <br>
+            
+            
+            <!-- Off Canvas image source descriptions -->
+            <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasImages"
+                aria-labelledby="offcanvasImagesLabel">
+                <!-- "offcanvas-end" moves offcanvas element to the right side of the screen -->
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasImagesLabel">Image Info</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h3 class="py-2">Sources for Images. Illustrations, and Photos</h3>
+                    <p>
+                        Noted here is a collection of all sources for the image gallery as best as I can track them down.
+                        I have taken care to collect images from sources that can be used under fair use, as I believe this 
+                        project falls under the category of educational use. If you are the owner of any of the images used 
+                        in this page and would like to have them removed, please contact me and I will be happy to take them 
+                        down.
+                    </p>
+                    <hr />
+                    <ul class="list-unstyled link-light">
+                        <li>1. <a href="https://anomalien.com/mysterious-cryptids-in-kentucky-what-can-you-encounter-there/">Bearilla (original artist unknown)</a></li>
+                        <li>2. <a href="https://cryptidz.fandom.com/wiki/Beast_of_the_Land_Between_the_Lakes">Beast of the Land Between the Lakes (original artist unknown)</a></li>
+                        <li>3. <a href="https://en.wikipedia.org/wiki/Bigfoot">Bigfoot (photograph via trailcam: Rick Jacobs) </a></li>
+                        <li>4. <a href="https://www.frnwh.com/2024/08/unveiling-the-mystery-of-the-oklahoma-octopus-a-dive-into-the-heartlands-legendary-cryptid/">Boonesborough Octopus (original artist unknown)</a>(artwork is of the Oklahoma Octopus, a similar creature)</li>
+                        <li>5. <a href="https://creepycincinnati.com/2011/11/09/narrows-road-2/">Cop Ghost of Narrows Road</a></li>
+                        <li>6. <a href="https://stock.adobe.com/">Demon Leaper (Adobe Stock (Jeff Dalton))</a></li>
+                        <li>7. <a href="https://stock.adobe.com/">Ghost Horses (Adobe Stock (-Misha))</a></li>
+                        <li>8. <a href="">Giraffe-Possum</a>(there is no rendition of this creature, so I made a graphic to represent "unknown")</li>
+                        <li>9. <a href="https://stock.adobe.com/">Green River Mermaids (Adobe Stock (Геннадий Кучин))</a></li>
+                        <li>10. <a href="https://www.ranker.com/list/kentucky-creepy-stories-legends/jacob-shelton">Hanging Man of Allendale Train Tunnel (photographer: Abandoned Tube Stations on YouTube)</a></li>
+                        <li>11. <a href="https://cryptomundo.com/bigfoot-report/the-kentucky-hellhound-2/">Hellhound of Pike County (photo from Mountain Monsters series, "Kentucky Hellhound  of Pike County" episode "Hellhound of Pike County")</a></li>
+                        <li>12. <a href="https://itsmth.fandom.com/wiki/Lake_Herrington_Monster">Herrington Lake Monster (original artist unknown)</a></li>
+                        <li>13. <a href="https://en.wikipedia.org/wiki/Hillbilly_Beast_of_Kentucky">Hillbilly Beast (from www.geocaching.com)</a></li>
+                        <li>14. <a href="https://www.artebelladaily.org/artebella/2019/12/10/public-art-spotlight-hogans-fountain-by-enid-yandell">Hogan's Fountain Statue of Pan (original photographer unknown)</a></li>
+                        <li>15. <a href="https://allthatsinteresting.com/kelly-hopkinsville-encounter">Kelly-Hopkinsville Goblins (artist: Andrew (Bud) Ledwith)</a></li>
+                        <li>16. <a href="http://www.kybigfoot.com/counties/cryptids.htm">Milton Lizard (original artist unknown)</a></li>
+                        <li>17. <a href="https://stock.adobe.com/">Mothman (Adobe Stock (GARETH))</a></li>
+                        <li>18. <a href="https://cryptidz.fandom.com/wiki/Blue_Mountains_Panther">Panther of Pine Mountain (original photographer unknown)</a>(photo is of Blue Mountain Panther, a similar creature)</li>
+                        <li>19. <a href="https://metro.co.uk/2015/11/29/people-are-going-crazy-over-sightings-of-the-goatman-5533037/">Pope Lick Monster (Goatman of Fisherville) (original source unknown)</a></li>
+                        <li>20. <a href="https://www.cryptidophilia.com/sheepsquatch/">Sheepsquatch (original artist unknown)</a></li>
+                        <li>21. <a href="https://www.onlyinyourstate.com/trip-ideas/kentucky/haunted-road-ky">Sleepy Hollow Road (original photographer: Morgan)</a></li>
+                        <li>22. <a href="https://stock.adobe.com/">Specters of the Cumberland (Adobe Stock (Dave))</a></li>
+                        <li>23. <a href="https://uacvoice.org/2022/10/tailypo-tailypo-who-or-what-is-tailypo/">Tailypo (artist: Erinn Sweet)</a></li>
+                        <li>24. <a href="https://www.americanfolklore.net/tommy-knockers/">Tommyknockers of the Mines (original photographer unknown)</a></li>
+                        <li>25. <a href="https://appalachianhistorian.org/abandoned-appalachia-the-twin-tunnels-of-typo-and-yerkes-of-perry-county/">Twin Train Tunnels (photographer: Kala Thornsbury)</a></li>
+                        <li>26. <a href="https://en.wikipedia.org/wiki/Wampus_cat">Wampus Cat (photographer: U458625)</a></li>
+                        <li>27. <a href="https://en.wikipedia.org/wiki/Witch_Child_of_Pilot%27s_Knob">Witch Child of Pilot's Knob (photographer: J.L. Cobb)</a></li>
+                    </ul>
+                    <hr />
+                </div>
+            </div>
 
             <!-- Images grid -->
             <div id="scroll-content">
                 <div class="container-5">
-                    <h2>Kentucky's Legends, Myths, and Cryptids</h2>
-                    <br>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="mb-0">Kentucky's Legends, Myths, and Cryptids</h2>
+                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasImages" role="button" aria-controls="offcanvasImages">
+                            Image Info
+                        </a>
+                    </div>
+                        <br>
                     <div class="img-container">
                         <div class="img-div">
-                            <img class="img-in-div" src="test-images/test-1.png" alt="Legend 1">
+                            <img class="img-in-div" src="images/bearilla.jpg" alt="Bearilla">
                             <div class="img-overlay">
-                                <h3>Legend 1</h3>
+                                <h3>Bearilla</h3>
                                 <p>Some description of Legend 1 goes here.</p>
                             </div>
                         </div>
                         <div class="img-div">
-                            <img class="img-in-div" src="test-images/test-2.png" alt="Legend 2">
+                            <img class="img-in-div" src="images/land-between-lakes-beast.jpg" alt="Beast of the Land Between the Lakes">
+                            <div class="img-overlay">
+                                <h3>Beast of the Land Between the Lakes</h3>
+                                <p>Some description of Legend 2 goes here.</p>
+                            </div>
                         </div>
                         <div class="img-div">
-                            <img class="img-in-div" src="test-images/test-3.png" alt="Legend 3">
+                            <img class="img-in-div" src="images/bigfoot.jpg" alt="Bigfoot">
+                            <div class="img-overlay">
+                                <h3>Bigfoot</h3>
+                                <p>Some description of Legend 3 goes here.</p>
+                            </div>
                         </div>
                         <div class="img-div">
-                            <img class="img-in-div" src="test-images/test-4.png" alt="Legend 4">
+                            <img class="img-in-div" src="images/oklahoma-octopus.jpg" alt="Boonesborough Octopus">
+                            <div class="img-overlay">
+                                <h3>Boonesborough Octopus</h3>
+                                <p>Some description of Legend 4 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/narrows-road.jpg" alt="Cop Ghost of Narrows Road">
+                            <div class="img-overlay">
+                                <h3>Cop Ghost of Narrows Road</h3>
+                                <p>Some description of Legend 5 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/demon-leaper-gargoyle.jpg" alt="Demon Leaper Gargoyle">
+                            <div class="img-overlay">
+                                <h3>Demon Leaper Gargoyle</h3>
+                                <p>Some description of Legend 6 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/ghost-horse.jpg" alt="Ghost Horses">
+                            <div class="img-overlay">
+                                <h3>Ghost Horses</h3>
+                                <p>Some description of Legend 7 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/unknown.jpg" alt="Giraffe-Possum">
+                            <div class="img-overlay">
+                                <h3>Giraffe-Possum</h3>
+                                <p>Some description of Legend 8 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/green-river-mermaid.jpg" alt="Green River Mermaids">
+                            <div class="img-overlay">
+                                <h3>Green River Mermaids</h3>
+                                <p>Some description of Legend 9 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/allendale-tunnel.jpg" alt="Hanging Man of Allendale Train Tunnel">
+                            <div class="img-overlay">
+                                <h3>Hanging Man of Allendale Train Tunnel</h3>
+                                <p>Some description of Legend 10 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/hellhound.jpg" alt="Hellhound of Pike County">
+                            <div class="img-overlay">
+                                <h3>Hellhound of Pike County</h3>
+                                <p>Some description of Legend 11 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/herrington-monster.jpg" alt="Herrington Lake Monster">
+                            <div class="img-overlay">
+                                <h3>Herrington Lake Monster</h3>
+                                <p>Some description of Legend 12 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/hillbilly-beast.jpg" alt="Hillbilly Beast">
+                            <div class="img-overlay">
+                                <h3>Hillbilly Beast</h3>
+                                <p>Some description of Legend 13 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/hogan-fountain-pan.jpg" alt="Hogan's Fountain Statue of Pan">
+                            <div class="img-overlay">
+                                <h3>Hogan's Fountain Statue of Pan</h3>
+                                <p>Some description of Legend 14 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/hopkinsville-goblin-diagram.jpg" alt="Kelly-Hopkinsville Goblins">
+                            <div class="img-overlay">
+                                <h3>Kelly-Hopkinsville Goblins</h3>
+                                <p>Some description of Legend 15 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/milton-lizard.jpg" alt="Milton Lizard">
+                            <div class="img-overlay">
+                                <h3>Milton Lizard</h3>
+                                <p>Some description of Legend 16 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/mothman.jpg" alt="Mothman">
+                            <div class="img-overlay">
+                                <h3>Mothman</h3>
+                                <p>Some description of Legend 17 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/panther-blue-mountain.jpg" alt="Panther of Pine Mountain">
+                            <div class="img-overlay">
+                                <h3>Panther of Pine Mountain</h3>
+                                <p>Some description of Legend 18 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/pope-lick-monster.jpeg" alt="Pope Lick Monster (Goatman of Fisherville)">
+                            <div class="img-overlay">
+                                <h3>Pope Lick Monster (Goatman of Fisherville)</h3>
+                                <p>Some description of Legend 19 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/sheepsquatch.jpg" alt="Sheepsquatch">
+                            <div class="img-overlay">
+                                <h3>Sheepsquatch</h3>
+                                <p>Some description of Legend 20 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/sleepy-hollow-rd.jpg" alt="Sleepy Hollow Road">
+                            <div class="img-overlay">
+                                <h3>Sleepy Hollow Road</h3>
+                                <p>Some description of Legend 21 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/cumberland-specter.jpg" alt="Specters of the Cumberland">
+                            <div class="img-overlay">
+                                <h3>Specters of the Cumberland</h3>
+                                <p>Some description of Legend 22 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/tailypo.jpeg" alt="Tailypo">
+                            <div class="img-overlay">
+                                <h3>Tailypo</h3>
+                                <p>Some description of Legend 23 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/tommyknocker.jpg" alt="Tommyknockers of the Mines">
+                            <div class="img-overlay">
+                                <h3>Tommyknockers of the Mines</h3>
+                                <p>Some description of Legend 24 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/twin-tunnels.jpg" alt="Twin Train Tunnels">
+                            <div class="img-overlay">
+                                <h3>Twin Train Tunnels</h3>
+                                <p>Some description of Legend 25 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/wampus-cat.jpg" alt="Wampus Cat">
+                            <div class="img-overlay">
+                                <h3>Wampus Cat</h3>
+                                <p>Some description of Legend 26 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="images/witch-child.jpg" alt="Witch Child of Pilot's Knob">
+                            <div class="img-overlay">
+                                <h3>Witch Child of Pilot's Knob</h3>
+                                <p>Some description of Legend 27 goes here.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -251,9 +463,11 @@
             map = L.map("map", options);
 
             // Request tiles from Leaflet providers and add to map
-            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
-                attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
-                maxZoom: 13
+            L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.{ext}', {
+                minZoom: 0,
+                maxZoom: 18,
+                attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                ext: 'png'
             }).addTo(map);
 
             // Add custom zoom control to map
@@ -262,14 +476,25 @@
             }).addTo(map);
 
             // Fetch geojson data and add it to the map as a layer
-            const response = await fetch("legends.geojson");
+            const response = await fetch("ky-leg.geojson");
             const legendData = await response.json();
+
+            // Create a layer group for the legends data
+            const spectersLayer = L.layerGroup().addTo(map);
+            const cryptidsLayer = L.layerGroup().addTo(map);
+
             // Add legends data from GeoJSON to map
             L.geoJson(legendData, {
                 pointToLayer: function (feature, latlng) {
+                    let color;
+                    if (feature.properties.type === "specter") {
+                        color = "#7DB5C7"
+                    } else {
+                        color = "#1C4F1C"
+                    }
                     return L.circleMarker(latlng, {
                         radius: 8,
-                        fillColor: "#ff7800",
+                        fillColor: color,
                         color: "#000",
                         weight: 1,
                         opacity: 1,
@@ -279,11 +504,25 @@
 
                 onEachFeature: function (feature, layer) {
                     layer.bindPopup(
-                        `<h3>${feature.properties.legend}</h3><p>${feature.properties.description}</p>`
+                        `<h3>${feature.properties.name}</h3><p>${feature.properties.region}</p>`
                     );
+                    // Add to appropriate layer group based on type
+                    if (feature.properties.type === "specter") {
+                        spectersLayer.addLayer(layer);
+                    } else {
+                        cryptidsLayer.addLayer(layer);
+                    }
                 }
-            }).addTo(map);
-        }
+            });
+
+            // Interactive legend
+            var sourceLayers = {
+                "<b style='color:#7DB5C7; text-shadow: 0px 0px 1px #333;'>Specters</b>": spectersLayer,
+                "<b style='color:#1C4F1C; text-shadow: 0px 0px 1px #333;'>Cryptids</b>": cryptidsLayer
+            }
+            L.control.layers(null, sourceLayers, { collapsed: false, position: 'bottomright' }).addTo(map);
+        };
+
 
         // GEOLOCATION FUNCTIONALITY
         // Function to get current position of user using geolocation API if user clicks geolocate button, then add marker to map
