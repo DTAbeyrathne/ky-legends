@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Webpage Mockup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Grenze+Gotisch:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="myStyle.css">
+</head>
+
+<body>
+    <!-- Add vertical strip to house sidebar -->
+    <div id="fake-sidebar"></div>
+
+    <!-- Sidebar open button -->
+    <button id="openBtn" class="openbtn" onclick="openNav()">&#9776;</button>
+
+    <!-- Side bar (hidden by default)-->
+    <div id="navSidebar" class="sidebar animate-left">
+        <div id="navbarContent">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+            <a href="#webmap" onclick="closeNav()">Map</a>
+            <a href="#about" onclick="closeNav()">About</a>
+            <a href="#contact" onclick="closeNav()">Resources</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div id="main">
+        <div class="container-fluid">
+            <header class="row bg-dark text-white p-2">
+                <div class="col-8">
+                    <h1>The Legends and Myths of Kentucky</h1>
+                    <h2>What Lurks in The Bluegrass State?</h2>
+                </div>
+
+                <div class="col-4 align-self-center">
+                    <p class="d-flex justify-content-end my-auto">
+                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                            aria-controls="offcanvasExample">
+                            Map Info
+                        </a>
+                        <span class="mx-2"></span>
+                        <button id="geolocate-ui">Find me</button>
+                    </p>
+                </div>
+            </header>
+
+            <section id="map-row" class="row">
+                <div class="p-0">
+                    <div id="map">
+                        <!-- The spinner that runs while API call resolves. -->
+                        <div id="loading" class="spinner-container">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <!-- "offcanvas-end" moves offcanvas element to the right side of the screen -->
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Map Info</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h3 class="py-2">NWS Active Weather Alerts</h3>
+                    <p>
+                        This map displays all active weather alerts across the United States as of the current date.
+                        The data is sourced from the National Weather Service (NWS) API, specifically for active alerts,
+                        which provides information on all active warnings including event type, severity, urgency, and
+                        a link to more information. This map uses a simple color coding scheme to classify different
+                        levels
+                        of alert severity, with darker colors indicating more severe alerts (with the exception of
+                        purple,
+                        which is used for alerts of unknown severity).
+                    </p>
+                    <div id="img"></div>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li>Authored by: <a href="https://github.com/DTAbeyrathne">Dilni Abeyrathne</a></li>
+                        <li>Map created: Feb. 20th, 2026</li>
+                        <li>Data source:
+                            <a href="https://api.weather.gov/">weather.gov API (NWS)</a>,
+                            <a href="https://api.weather.gov/alerts/active?">Active Alerts (specific URL)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Description and Info -->
+            <div id="description" >
+                <div class="container-5">
+                    <h2>About This Map</h2>
+                    <p>
+                        Wow, I can't believe this actually works a little bit!
+                    </p>
+                </div>
+            </div>
+
+                <br>
+
+            <!-- Images grid -->
+            <div id="scroll-content">
+                <div class="container-5">
+                    <h2>Kentucky's Legends, Myths, and Cryptids</h2>
+                    <br>
+                    <div class="img-container">
+                        <div class="img-div">
+                            <img class="img-in-div" src="test-images/test-1.png" alt="Legend 1">
+                            <div class="img-overlay">
+                                <h3>Legend 1</h3>
+                                <p>Some description of Legend 1 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="test-images/test-2.png" alt="Legend 2">
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="test-images/test-3.png" alt="Legend 3">
+                        </div>
+                        <div class="img-div">
+                            <img class="img-in-div" src="test-images/test-4.png" alt="Legend 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer" id="footer">
+            <div class="container text-center">
+                <div class="row align-items-start">
+                    <div class="col">
+                        <h3>CREDITS</h3>
+                        <p>
+                            Map and page created by Dilni Abeyrathne for MAP673-201, Spring 2026.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h3>FIND ME</h3>
+                        <p>
+                            <a href="https://github.com/DTAbeyrathne">My GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h3>OTHER RESOURCES</h3>
+                        <p>
+                            Explore Mapping & GIS at the University of Kentucky!
+                        </p>
+                        <p>
+                            <a href="https://uky-gis.github.io/#mapshop">UKy Mapping & GIS</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <!-- then Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
+        </script>
+
+    <script>
+        /* Set the width of the sidebar to 250px and the left margin of the page content to 0px */
+        function openNav() {
+            document.getElementById("navSidebar").classList.add("open");
+            document.getElementById("main").classList.add("shifted");
+            document.getElementById("openBtn").style.display = "none";
+        }
+
+        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("navSidebar").classList.remove("open");
+            document.getElementById("main").classList.remove("shifted");
+            document.getElementById("openBtn").style.display = "block";
+        } 
+    </script>
+
+    <script>
+        // Set global variables for map, header, map container, and footer
+        let map;
+        const header = document.querySelector("header");
+        const footer = document.querySelector("#footer");
+        const scrollContent = document.querySelector("#scroll-content");
+        const description = document.querySelector("#description");
+        const mapRow = document.querySelector("#map-row");
+        const mapContainer = document.querySelector("#map");
+        const images = document.querySelector("#offcanvasExample #img");
+
+        setupPage();
+        // Add event listener to window resize to adjust page layout
+        window.addEventListener("resize", setupPage);
+
+        function setupPage() {
+            // Set scrollcontainer height to fill remaining vertical space between header, map, and footer
+            // You'll want to set the heights of these proportionally via CSS initially, then use JS to adjust heights to fit the screen.
+            // Might move footer content somewhere else so it doesn't have to be included in the height calculations for the scroll container.
+            const headerHeight = header.offsetHeight;
+            const footerHeight = footer.offsetHeight;
+            const mapRowHeight = mapRow.offsetHeight;
+            const descriptionHeight = description.offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrollContentHeight = windowHeight - headerHeight - mapRowHeight - descriptionHeight;
+            const remainingHeight = windowHeight - headerHeight - footerHeight - scrollContentHeight;
+            scrollContent.style.height = `${scrollContentHeight}px`;
+        }
+
+        // Call setupMap function to create map
+        setupMap();
+
+        // Geolocation API
+        if (navigator.geolocation) {
+            // Browser supports geolocation API
+        } else {
+            // Browser doesn't support geolocation API
+            console.log("Geolocation is not supported by this browser.");
+            document.querySelector("#geolocation").innerHTML = "Geolocation is not supported by this browser.";
+        }
+
+        const locate = document.querySelector("#geolocate-ui");
+        locate.addEventListener("click", geoLocate);
+
+        // Function to setup map
+        async function setupMap() {
+            // Set Leaflet map options
+            const options = {
+                center: [37.5347, -85.3021], // Centered on Kentucky
+                zoom: 7.5,
+                scrollWheelZoom: true,
+                zoomSnap: 0.1,
+                dragging: true,
+                zoomControl: false,
+            };
+
+            // Create Leaflet map object
+            map = L.map("map", options);
+
+            // Request tiles from Leaflet providers and add to map
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
+                maxZoom: 13
+            }).addTo(map);
+
+            // Add custom zoom control to map
+            L.control.zoom({
+                position: 'topright'
+            }).addTo(map);
+
+            // Fetch geojson data and add it to the map as a layer
+            const response = await fetch("legends.geojson");
+            const legendData = await response.json();
+            // Add legends data from GeoJSON to map
+            L.geoJson(legendData, {
+                pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, {
+                        radius: 8,
+                        fillColor: "#ff7800",
+                        color: "#000",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    });
+                },
+
+                onEachFeature: function (feature, layer) {
+                    layer.bindPopup(
+                        `<h3>${feature.properties.legend}</h3><p>${feature.properties.description}</p>`
+                    );
+                }
+            }).addTo(map);
+        }
+
+        // GEOLOCATION FUNCTIONALITY
+        // Function to get current position of user using geolocation API if user clicks geolocate button, then add marker to map
+        function locateUser() {
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    console.log(position);
+                    const currentLocation = [position.coords.latitude, position.coords.longitude];
+                    // Add marker to map at user's location
+                    L.marker(currentLocation).addTo(map)
+                        .bindPopup("You are here!")
+                        .openPopup();
+                    localStorage.setItem("user-location", currentLocation);
+                },
+                function (err) {
+                    console.log(err);
+                },
+                {
+                    // Options object
+                    enableHighAccuracy: true, // Use high accuracy mode if available
+                    maximumAge: 0,
+                }
+            );
+        }
+
+        // Function to use browser's geolocation API to find user's location and add marker to map
+        function geoLocate() {
+            locate.textContent = "Locating...";
+
+            // Set high accuracy for mobile devices
+            let hiAcc = false;
+            if (L.Browser.mobile) {
+                hiAcc = true;
+            }
+
+            // Create bounds object to store locations then average them
+            let bounds = L.latLngBounds();
+
+            // Set counter to stop after 5 locations
+            let n = 0;
+
+            // Create a timer to stop after 5 seconds
+            let timer;
+
+            // Create function to get current position
+            const nowPosition = (position) => {
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+
+                // Create Leaflet latlng object
+                const latlng = L.latLng(lat, lng);
+
+                // Extend the bounds object with the latlng
+                bounds.extend(latlng);
+
+                // Increment counter
+                n++
+                console.log(n);
+
+                // If 5 locations have been collected, stop timer and draw map with average location
+                if (n == 5) {
+                    // Stop timer
+                    clearInterval(timer);
+                    const location = bounds.getCenter();
+                    locate.textContent = "Location found!";
+                    // Draw marker and set view to average location
+                    L.marker(location).addTo(map)
+                        .bindPopup("You are here!")
+                        .openPopup();
+                    map.setView(location, 13);
+
+                    // Store Leaflet's latlng location in local storage
+                    localStorage.setItem("user-location", location);
+
+                    // Reset the button text after 5 seconds
+                    setTimeout(() => {
+                        locate.textContent = "Find me";
+                    }, 5000); // In milliseconds
+                }
+            };
+
+            // Create function to handle geolocation errors
+            const geoError = (err) => {
+                console.log(err);
+                // Stop timer if error occurs
+                clearInterval(timer);
+                // Applicable error message
+                if (err.code === 1) {
+                    locate.textContent = "Location access denied."; // If user denies location access
+                } else {
+                    locate.textContent = "Location unavailable.";
+                }
+                // Reset the button text after 5 seconds
+                setTimeout(() => {
+                    locate.textContent = "Find me";
+                }, 5000);
+            };
+
+            // Set timer to get current position every second
+            timer = setInterval(() => {
+                navigator.geolocation.getCurrentPosition(nowPosition, geoError, {
+                    enableHighAccuracy: hiAcc,
+                    maximumAge: 0,
+                });
+            }, 1000);
+        }
+
+        // ADD FUNCTION TO COLOR CODE MAP MARKERS
+
+        // ADD FUNCTIONALITY TO ALLOW USER TO ADD A MARKER TO THE MAP
+
+        // ADD FUNCTIONALITY TO ALLOW USER TO ADD IMAGE & DESCRIPTION OVERLAY TO WEBPAGE
+
+</script>
+</body>
+
+</html>
