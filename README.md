@@ -172,7 +172,7 @@ All map data will be stored as a GeoJSON. Images will be stored in their own fol
 3. All of actual data (still working on compilation) and their popups
 4. Color coding for the full dataset (still working on categorization and if this is needed)
 
-## 6. FInal Map & Webpage - Log and Notes
+## 6. Final Map & Webpage - Log and Notes
 
 - Copied over all relevant files from Module 6 proposal folder over to a new repository (ky-legends)
 - Compiled all data and images into a GeoJSON (initially, the images were not included in the GeoJSON)
