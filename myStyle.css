@@ -170,6 +170,14 @@ button:hover {
     font-weight: 400;
 }
 
+.popup-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-top: 6px 0;
+    border-radius: 6px;
+}
+
 /* Sidebar styling for menu*/
 #navbarContent {
     display: flex;
