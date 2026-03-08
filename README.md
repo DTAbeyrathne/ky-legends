@@ -199,6 +199,8 @@ All map data will be stored as a GeoJSON. Images will be stored in their own fol
 
 **Known Issues to Fix**
 1. None so far! I believe I've fixed all issues thus far, but if any come your way, please leave me a comment or a message about it so I can recitify it!
+2. Location marker doesn't disappear when clicking "x"
+
 
 **Functionalities and Other Things I Didn't Get Add**
 1. Due to time constraints (and not being to figure out a good way to integrate the code into my current project), I was not able to add the user-creation functionalities for neither the map (creating and placing markers) nor the image gallery (uploading images and providing a description)--this is definitely something I want to keep in mind for the future though!
