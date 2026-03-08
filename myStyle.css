@@ -6,18 +6,118 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
+#main {
+  margin-left: 50px;
+  transition: margin-left .5s ease;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  padding-bottom: 20px;
+  min-height: 0;
+}
+
+#map {
+    min-height: 50vh;
+    background: #e9ecef;
+    flex-shrink: 0;
+}
+
+#description {
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+#description-box {
+    margin-bottom: 20px;
+    background-color: #b1b1ce;
+}
+
+#scroll-content {
+    padding: 20px;
+    flex: 1 1 auto;
+    min-height: 500px;
+    overflow-y: auto;
+}
+
+/* Images grid container */
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    gap: 20px;
+    background-color: #b1b1ce;
+    padding: 20px;
+    min-height: 200px;
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+.img-div {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-in-div {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.img-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.img-div:hover .img-overlay {
+  opacity: 1;
+}
+
+#modal01 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1005; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.w3-modal-content {
+    background-color:#b1b1ce;
+    color:#0a0a0a;
+}
+
+
 .footer {
-    display: flex;
     align-items: center;
     background: #585b6f;
     color: #ffffff;
-    position: flex;
-    left: 0;
-    bottom: 0;
     width: 100%;
     padding: 20px;
+    flex-shrink: 0;
 }
 
 h1 {
@@ -52,12 +152,6 @@ a {
 a:hover {
     color: rgb(130, 131, 132);
     text-decoration: none;
-}
-
-#map {
-    height: 50vh;
-    background: #e9ecef;
-    /* position: fixed; */
 }
 
 button {
@@ -188,26 +282,12 @@ button:hover {
     display: flex !important;
 }
 
-#description {
-    padding: 20px;
-}
-
-#description p {
-    margin-bottom: 20px;
-    background-color: #b1b1ce;
-}
-
-#scroll-content {
-    padding: 20px;
-    overflow: scroll;
-}
-
 #fake-sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 50px; /* Width of the vertical strip */
-    height: 100vh; /* Full viewport height */
+    min-height: 100vh; /* Full viewport height */
     background-color: #888ca9; /* Same color as sidebar */
     z-index: 900;
 }
@@ -282,78 +362,9 @@ button:hover {
     font-size: 30px;
 }
 
-#main {
-  margin-left: 50px;
-  transition: margin-left .5s ease;
-}
-
 /* When sidebar is open, shift the main content to the right */
 #main.shifted {
   margin-left: 250px;
-}
-
-/* Images grid container */
-.img-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 200px;
-    gap: 20px;
-    grid-auto-flow: dense;
-    background-color: #b1b1ce;
-}
-
-.img-div {
-    width: 300px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-}
-
-.img-in-div {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-/* The overlay effect - lays on top of the container and over the image */
-.img-overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1;
-  width: 100%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  text-align: center;
-}
-
-/* When you mouse over the container, fade in the overlay title */
-.img-div:hover .img-overlay {
-  opacity: 1;
-}
-
-#modal01 {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1005; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-}
-
-.w3-modal-content {
-    background-color:#b1b1ce;
-    color:#0a0a0a;
 }
 
 /* Allow mobile users to tap on the image to show the overlay */

@@ -170,24 +170,57 @@
             <div id="description" >
                 <div class="container-5">
                     <h2>About This Map</h2>
-                    <p>
-                        Ever wondered what kind of strange and mysterious creatures might be lurking in the forests
-                        and mountains of Kentucky? Well, you're in luck! This map features a selection of well-known
-                        and interesting legends from across the state, including cryptids and specters. Each legend
-                        is represented by a color-coded marker on the map (green for cryptid, blue for specter) with 
-                        a convenient checkmark legend on the top right to really get into the exploration. A true 
-                        earth basemap provides a good amound of physical geographic context to each legend and a "Find 
-                        Me" button marks your current location so you can see which legends are near where you are! 
-                        Perhaps you might even see a sighting too!
-                    </p>
-                    <p>
-                        
-                    </p>
+                    <div id="description-box" class="container-5">
+                        <p>
+                            Ever wondered what kind of strange and mysterious creatures might be lurking in the forests
+                            and mountains of Kentucky? Well, you're in luck! This map features a selection of well-known
+                            and interesting legends from across the state, including cryptids and specters. Each legend
+                            is represented by a color-coded marker on the map (green for cryptid, blue for specter) with 
+                            a convenient checkmark legend on the top right to really get into the exploration. A true 
+                            earth basemap provides a good amound of physical geographic context to each legend and a "Find 
+                            Me" button marks your current location so you can see which legends are near where you are! 
+                            Perhaps you might even see a sighting too!
+                        </p>
+                        <p>
+                            There are lots of features to play around with on this map and webpage, so feel free to explore 
+                            to your heart's content! I'll also give a run through of those features here. 
+                        </p>
+                        <ul>
+                            <li>
+                                First, we have our lovely map, arguably the star of the page. On the map, you will be able 
+                                to visualize the spread of the legends across Kentucky as well as where each legend is located. 
+                                If you want to know more about any of the markers, simply click on them to bring up a small pop-up 
+                                with the legend's name, it's associated region, and a reference photo. As mentioned before, use the 
+                                legend at the bottom right to help you navigate the map. 
+                            </li>
+                            <li>
+                                Second, we have this section, which will preface the map and all its functionality.
+                            </li>
+                            <li>
+                                Third, we have the image gallery, the secondary emphasis of the map. Here, you can find an alphabetized
+                                list of all the legends referenced in the map. The images have a fixed size, so they may have some parts
+                                cut off intially. Hovering over the image will reveal an overlay with a brief description of the legend. 
+                                Additionally, clicking anywhere on the image will bring up the full image with the overlay description 
+                                transferred over for ease of reading and viewing. The image gallery has its own nested scroll functionality
+                                so that you can keep an eye on the map even while scrolling through the gallery.
+                            </li>
+                            <li>
+                                Fourth, there is a helpful sidebar to the right. To access it, simply click the three parallel lines on the 
+                                top left (the "hamburger"). This will bring up a side panel that has quick links for: (1) the map, (2) the 
+                                about section, (3) the image gallery, and (4) the footer where additional resources and links are stored.
+                            </li>
+                            <li>
+                                Fifth, there is a selection of lvely buttons and respective information to explore! Take a look at the top
+                                two buttons ("Map Credits" and "Find Me"). The "Map Credits" button will bring up a side panel that lists
+                                all the data sources for the map as well as details on the mapmaker. The "Find Me" button is a geolocation
+                                functionality where it will place a marker on your current browser if you give your browser permission to
+                                track your location. The last button on the page is the "Image Info" button, which is simply a list of sources
+                                for sourcing each picture for the gallery.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-                <br>
-            
             
             <!-- Off Canvas image source descriptions -->
             <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasImages"
@@ -537,57 +570,57 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Footer -->
-        <div class="footer" id="footer">
-            <div class="container text-center">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <h3>CREDITS</h3>
-                        <p>
-                            Map and page created by Dilni Abeyrathne for MAP673-201, Spring 2026.
-                        </p>
-                    </div>
-                    <div class="col">
-                        <h3>FIND ME</h3>
-                        <p>
-                            <a href="https://github.com/DTAbeyrathne">My GitHub</a>
-                        </p>
-                    </div>
-                    <div class="col">
-                        <h3>OTHER RESOURCES</h3>
-                        <p>
-                            Explore Mapping & GIS at the University of Kentucky!
-                        </p>
-                        <p>
-                            <a href="https://uky-gis.github.io/#mapshop">UKy Mapping & GIS</a>
-                        </p>
-                    </div>
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container text-center">
+            <div class="row align-items-start">
+                <div class="col">
+                    <h3>CREDITS</h3>
+                    <p>
+                        Map and page created by Dilni Abeyrathne for MAP673-201, Spring 2026.
+                    </p>
+                </div>
+                <div class="col">
+                    <h3>FIND ME</h3>
+                    <p>
+                        <a href="https://github.com/DTAbeyrathne">My GitHub</a>
+                    </p>
+                </div>
+                <div class="col">
+                    <h3>OTHER RESOURCES</h3>
+                    <p>
+                        Explore Mapping & GIS at the University of Kentucky!
+                    </p>
+                    <p>
+                        <a href="https://uky-gis.github.io/#mapshop">UKy Mapping & GIS</a>
+                    </p>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <!-- Modal for full size images on click (updated styling)-->
-        <div id="modal01" class="w3-modal">
-            <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-center">
-            <header class="w3-container w3-theme-d5 w3-padding-16"> 
-                <span onclick="document.getElementById('modal01').style.display='none'" 
-                class="w3-button w3-xlarge w3-display-topright">X</span>
-                <h2 id="modal-header"></h2>
-            </header>
-            <div class="w3-container w3-theme-a4 w3-padding-16">
-                <img id="img01" class="w3-image">
-                <p id="modal-link"></p>
-                <p id="caption"></p>
-            </div>
-            <footer class="w3-container w3-theme-d5">
-                <p id="modal-footer"></p>
-            </footer>
-            </div>
+    <!-- Modal for full size images on click (updated styling)-->
+    <div id="modal01" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-center">
+        <header class="w3-container w3-theme-d5 w3-padding-16"> 
+            <span onclick="document.getElementById('modal01').style.display='none'" 
+            class="w3-button w3-xlarge w3-display-topright">X</span>
+            <h2 id="modal-header"></h2>
+        </header>
+        <div class="w3-container w3-theme-a4 w3-padding-16">
+            <img id="img01" class="w3-image">
+            <p id="modal-link"></p>
+            <p id="caption"></p>
         </div>
-
+        <footer class="w3-container w3-theme-d5">
+            <p id="modal-footer"></p>
+        </footer>
+        </div>
     </div>
-    
+</body>
+
     <!-- Add Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
@@ -872,6 +905,5 @@
         // ADD FUNCTIONALITY TO ALLOW USER TO ADD IMAGE & DESCRIPTION OVERLAY TO WEBPAGE
 
 </script>
-</body>
 
 </html>
