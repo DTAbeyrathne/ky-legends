@@ -330,6 +330,24 @@ button:hover {
   opacity: 1;
 }
 
+#modal01 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1005; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.w3-modal-content {
+    background-color:#b1b1ce;
+    color:#0a0a0a;
+}
+
 /* Allow mobile users to tap on the image to show the overlay */
 @media (hover: none) {
     .img-overlay {
