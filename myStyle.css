@@ -177,6 +177,10 @@ button:hover {
     border: 2px solid rgba(102, 101, 158, 0.9);
 }
 
+h5 {
+    font-family: 'Grenze Gotisch', serif;
+}
+
 /* Loading spinner style */
 .spinner-container {
     display: flex;
