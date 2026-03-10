@@ -20,7 +20,7 @@ body {
 }
 
 #map {
-    min-height: 50vh;
+    min-height: 80vh;
     background: #e9ecef;
     flex-shrink: 0;
 }
@@ -198,6 +198,11 @@ h5 {
     border-top: 16px solid #d5a6f0;
     border-radius: 50%;
     animation: spin 1s infinite ease-in-out;
+}
+
+/* Set blending mode to multiply for middle pane (RD2 vector tile layer)
+.leaflet-pane.middle {
+    mix-blend-mode: multiply;
 }
 
 /* The animation that defines the type motion for spinner */

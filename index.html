@@ -10,6 +10,14 @@
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
+    </script>
+    <!-- Esri Leaflet -->
+    <script src="https://unpkg.com/esri-leaflet@3.0.19/dist/esri-leaflet.js"></script>
+    <!-- Esri Leaflet Vector -->
+    <script src="https://unpkg.com/esri-leaflet-vector@4.3.2/dist/esri-leaflet-vector.js"></script>
     <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Grenze+Gotisch:wght@100..900&display=swap"
@@ -627,11 +635,7 @@
     <!-- Add Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
-    <!-- then Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
-        </script>
+    </script>
 
     <script>
         /* Set the width of the sidebar to 250px and the left margin of the page content to 0px */
@@ -700,9 +704,6 @@
             scrollContent.style.height = `${scrollContentHeight}px`;
         }
 
-        // Call setupMap function to create map
-        setupMap();
-
         // Geolocation API
         if (navigator.geolocation) {
             // Browser supports geolocation API
@@ -720,7 +721,7 @@
             // Set Leaflet map options
             const options = {
                 center: [37.5347, -85.3021], // Centered on Kentucky
-                zoom: 7.5,
+                zoom: 7,
                 scrollWheelZoom: true,
                 zoomSnap: 0.1,
                 dragging: true,
@@ -730,12 +731,34 @@
             // Create Leaflet map object
             map = L.map("map", options);
 
+            // Create panes for ordering layers
+            const panes = ["bottom", "middle", "top"];
+            panes.forEach((pane, i) => {
+                map.createPane(pane);
+                const paneElement = map.getPane(pane);
+                paneElement.style.zIndex = 200 + (i * 200); // Set z-index for layer ordering
+            })
+            
+
             // Request tiles from Leaflet providers and add to map
-            L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.{ext}', {
-                minZoom: 0,
-                maxZoom: 18,
-                attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                ext: 'png'
+            // L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.{ext}', {
+            //     minZoom: 0,
+            //     maxZoom: 18,
+            //     attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            //     ext: 'png'
+            // }).addTo(map);
+
+            // Add hillshade layer from ESRI to map
+            L.esri.tiledMapLayer({
+                url: "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+                pane: "bottom",
+            }).addTo(map);
+
+            // Add ESRI Red Dead Redemption II vector tile layer to map
+            L.esri.tiledMapLayer({
+                    url: "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/resources/styles/root.json",
+                    maxZoom: 19,
+                    pane: "middle",
             }).addTo(map);
 
             // Add custom zoom control to map
@@ -796,6 +819,8 @@
             L.control.layers(null, sourceLayers, { collapsed: false, position: 'bottomright' }).addTo(map);
         };
 
+        // Wait for DOM to load before running setupMap function
+        document.addEventListener("DOMContentLoaded", setupMap);
 
         // GEOLOCATION FUNCTIONALITY
         // Function to get current position of user using geolocation API if user clicks geolocate button, then add marker to map
