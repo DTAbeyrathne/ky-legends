@@ -755,11 +755,13 @@
             }).addTo(map);
 
             // Add ESRI Red Dead Redemption II vector tile layer to map
-            L.esri.tiledMapLayer({
-                    url: "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/resources/styles/root.json",
+            L.esri.Vector.vectorTileLayer(
+                 "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/resources/styles/root.json",
+                 {   
                     maxZoom: 19,
                     pane: "middle",
-            }).addTo(map);
+                }
+            ).addTo(map);
 
             // Add custom zoom control to map
             L.control.zoom({
